@@ -52,3 +52,9 @@ sbatch scripts/sbatch_get_sra_reads.sh
 
 ```
 
+### Fastqc to find adapter sequence
+
+```bash
+cd ./scripts
+sbatch sbatch_2_fastqc.sh
+```
