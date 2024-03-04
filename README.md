@@ -48,5 +48,7 @@ cat data/rawreads/srr_id.list
 #SRX13141189
 # "Raw Illumina sequencing reads were deposited in the NCBI Sequence Read Archive under BioProject ID PRJNA780533, with accession numbers SRX13141184, SRX13141185, and SRX13141186 for strain ATCC 17961 and SRX13141187, SRX13141188, and SRX13141189 for strain 17961-ΔbfmR."
 # Sbatch this command...
+sbatch scripts/sbatch_get_sra_reads.sh 
+
 ```
 
