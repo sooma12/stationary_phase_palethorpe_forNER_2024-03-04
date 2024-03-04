@@ -54,7 +54,27 @@ sbatch scripts/sbatch_get_sra_reads.sh
 
 ### Fastqc to find adapter sequence
 
+The authors reported that Illumina TruSeq was used for library preparation.
+
 ```bash
 cd ./scripts
 sbatch sbatch_2_fastqc.sh
 ```
+
+Fastqc reports "Illumina universal adapter sequence".  I guessed which adapter file (that comes with trimmomatic) and trimmed two samples:
+
+```bash
+module load trimmomatic/0.39
+module load oracle_java/jdk1.8.0_181
+java -jar /shared/centos7/trimmomatic/0.39/trimmomatic-0.39.jar PE -threads 1 -phred33 rawreads/SRR16949318_1.fastq rawreads/SRR16949318_2.fastq trimmed/paired/SRR16949318_1_paired.fastq trimmed/unpaired/SRR16949318_1_unpaired.fastq trimmed/paired/SRR16949318_2_paired.fastq trimmed/unpaired/SRR16949318_2_unpaired.fastq HEADCROP:0 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:30 MINLEN:36 ILLUMINACLIP:/shared/centos7/anaconda3/2021.11/envs/BINF-12-2021/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE-2.fa:2:30:10
+```
+
+Then, I ran fastqc: 
+```bash
+module load OpenJDK/19.0.1
+module load fastqc/0.11.9
+fastqc ./*.fastq
+```
+
+The resulting fastqc html files showed that adapters were removed, indicating that `TruSeq3-PE-2.fa` is the adapter file to use.
+
