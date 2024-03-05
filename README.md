@@ -15,24 +15,34 @@ bash ~/request_compute_node.bash
 
 cd /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04
 
-mkdir -p genome
+mkdir -p ref
 init_agent # custom function for dealing with git ssh
 touch .gitignore
-echo '/genome' >.gitignore
+echo '/ref' >.gitignore
 git cmp '' # custom function: add-commit-push
 
 # Download reference genome
+
+#cat genome_extensions.list 
+##fna
+##features.tab
+##gff
+##fnn
+##frn
+#for ext in `cat genome_extensions.list`; do wget -a genome/wget.log -N "ftp://ftp.bvbrc.org/genomes/470.2202/470.2202.$ext"; done
+# fna downloaded correctly; all others yielded 404.  Tried individually and still got 404.
+# IMPORTANT NOTE: I discovered that the RefSeq annotations are not available. This necessitated use of the PATRIC annotations...
+##  Fixed version
 cat genome_extensions.list 
 #fna
-#features.tab
-#gff
-#fnn
-#frn
+#PATRIC.fna
+#PATRIC.features.tab
+#PATRIC.gff
 
-for ext in `cat genome_extensions.list`; do wget -a genome/wget.log -N "ftp://ftp.bvbrc.org/genomes/470.2202/470.2202.$ext"; done
-# fna downloaded correctly; all others yielded 404.  Tried individually and still got 404.
+for ext in `cat ref/genome_extensions.list`; do wget -a ref/wget.log -N "ftp://ftp.bvbrc.org/genomes/470.2202/470.2202.$ext"; done
 
-mv 470* genome
+mkdir -p ref/470_2202/
+mv 470* ref/470_2202/
 
 # Download RNA-seq data
 mkdir -p data/rawreads
@@ -78,3 +88,18 @@ fastqc ./*.fastq
 
 The resulting fastqc html files showed that adapters were removed, indicating that `TruSeq3-PE-2.fa` is the adapter file to use.
 
+`sbatch_3_trim.sh` was the run to trim the all fastq files.
+
+### Genome building
+
+bv-brc.org seems not to have a gtf or gff file for the RefSeq fna file.  So, I'm going to use the fna along with the .PATRIC.gff.
+
+Convert the gff file to gtf using gffread:
+```bash
+# Note, I set up gffread as a module in 2024-01_rnaseq_pbpGlpsB
+module load gffread
+REF_DIR=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202
+gffread  $REF_DIR/470.2202.PATRIC.gff -T -o $REF_DIR/470_2202.gtf
+```
+
+Run STAR aligner in mode genomegenerate using sbatch_4_generate.sh.
