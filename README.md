@@ -103,3 +103,14 @@ gffread  $REF_DIR/470.2202.PATRIC.gff -T -o $REF_DIR/470_2202.gtf
 ```
 
 Run STAR aligner in mode genomegenerate using sbatch_4_generate.sh.
+Mar 5, 2024: This script threw the following error: 
+`Fatal INPUT FILE error, no valid exon lines in the GTF file: /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202.gtf
+Solution: check the formatting of the GTF file. One likely cause is the difference in chromosome naming between GTF and FASTA file.
+`
+
+Two possible solutions:
+1. It could be the "exon" label isn't present.  I tried fixing this with `--sjdbGTFfeatureExon transcript` in the script I ran, but maybe that doesn't work. Try removing that line and running gff3_colThree_to_exon.py from 2024-01_rnaseq project.
+2. The provided solution is a difference in chromosome naming.  The fna file's header is `>470.2202.con.0001      [Acinetobacter baumannii ATCC 17961 | 470.2202]`.  However, the gtf file has this in its first column: `accn|470.2202.con.0001`
+Edited gtf file with `sed`:
+`sed 's/accn|470.2202.con.0001/470.2202.con.0001/g' /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202.gtf >/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202_chrrename.gtf`
+
