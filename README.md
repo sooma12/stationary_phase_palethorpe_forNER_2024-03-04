@@ -109,6 +109,9 @@ Solution: check the formatting of the GTF file. One likely cause is the differen
 `
 
 Checked GTF file and the fna file to se if chromosome names agreed; they differed by 'accn|' in the GTF.  Edited gtf file with `sed`:
-`sed 's/accn|470.2202.con.0001/470.2202.con.0001/g' /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202.gtf >/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202_chrrename.gtf`
+`sed 's/accn|//g' /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202.gtf >/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202_chrrename.gtf`
 
-Note, STAR genomeGenerate took only 
+### Alignment to reference
+
+Prepare sample sheet using:
+`bash scripts/script_5_prep_sample_sheet_for_STAR.sh /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data/trimmed/paired /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data/trimmed/paired/sample_sheet.txt`
