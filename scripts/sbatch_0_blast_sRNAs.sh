@@ -17,9 +17,7 @@ DB_17961=${WORK_DIR}/ref/CP065432
 
 # Load conda environment with BLAST
 # shellcheck disable=SC2046
-eval $(conda shell.bash hook)
-module load anaconda3/2021.11
-conda activate /work/geisingerlab/conda_env/blast_corr
+module load ncbi-blast+/2.13.0
 
 blastn -query $SRNA_FA -db $DB_17961 \
     -max_target_seqs 1 \
