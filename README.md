@@ -122,7 +122,7 @@ Make an annotation file with just this.
 3. Blast sRNA fasta list against the CP065432.1 fasta file
 - `conda activate /work/geisingerlab/conda_env/blast_corr`  I had installed BLAST previously
 - Make BLAST database in `./ref/CP065432`: `makeblastdb -in CP065432.1.fasta -out CP065432 -parse_seqids -dbtype nucl`
-- Run `sbatch sbatch_0_blast_sRNAs.sh`
+- Run `sbatch scripts/sbatch_0_blast_sRNAs.sh`
 
 
 ### Alignment to reference
