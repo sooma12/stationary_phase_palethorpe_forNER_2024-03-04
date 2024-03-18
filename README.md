@@ -90,7 +90,7 @@ The resulting fastqc html files showed that adapters were removed, indicating th
 
 `sbatch_3_trim.sh` was the run to trim the all fastq files.
 
-### Genome building
+### Genome building - FIRST ATTEMPT; SCRATCH THIS
 
 bv-brc.org seems not to have a gtf or gff file for the RefSeq fna file.  So, I'm going to use the fna along with the .PATRIC.gff.
 
@@ -111,7 +111,17 @@ Solution: check the formatting of the GTF file. One likely cause is the differen
 Checked GTF file and the fna file to se if chromosome names agreed; they differed by 'accn|' in the GTF.  Edited gtf file with `sed`:
 `sed 's/accn|//g' /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202.gtf >/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/470_2202/470_2202_chrrename.gtf`
 
+### Genome building v2 - sRNAs only
+
+Spoke to EG and decided on a different approach - begin with the complete genome (i.e. the full circular chromosome).
+Find sRNAs by BLAST
+Make an annotation file with just this.
+
+Get sRNA list in FASTA format using 
+
 ### Alignment to reference
 
 Prepare sample sheet using:
 `bash scripts/script_5_prep_sample_sheet_for_STAR.sh /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data/trimmed/paired /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data/trimmed/paired/sample_sheet.txt`
+
+Run STAR aligner using `sbatch_6_STARalign.sh`
