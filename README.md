@@ -118,10 +118,10 @@ Find sRNAs by BLAST
 Make an annotation file with just this.
 
 1. Get sRNA list in FASTA format using `kroger_srnas_to_fasta.py`
-2. Download 17961 fasta to `./ref/CP065432` from GenBank via `wget -O CP065432.1.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=CP065432.1&rettype=fasta"`
+2. Download 17961 fasta to `./ref/CP065432_ref` from GenBank via `wget -O CP065432.1.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=CP065432.1&rettype=fasta"`
 3. Blast sRNA fasta list against the CP065432.1 fasta file
 - `conda activate /work/geisingerlab/conda_env/blast_corr`  I had installed BLAST previously
-- Make BLAST database in `./ref/CP065432`: `makeblastdb -in CP065432.1.fasta -out CP065432 -parse_seqids -dbtype nucl`
+- Make BLAST database in `./ref/CP065432_ref`: `makeblastdb -in CP065432.1.fasta -parse_seqids -dbtype nucl`
 - Run `sbatch scripts/sbatch_0_blast_sRNAs.sh`
 
 
