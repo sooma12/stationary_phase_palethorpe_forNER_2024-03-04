@@ -2,7 +2,7 @@
 # MWS 3/18/24
 """
 Take Kroger 2017 sRNA table; output a fasta in the format:
->sRNA #
+>sRNA#
 <sequence>
 """
 
