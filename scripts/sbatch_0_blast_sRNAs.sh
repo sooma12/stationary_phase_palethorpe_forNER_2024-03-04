@@ -4,7 +4,8 @@
 #SBATCH --time=04:00:00
 #SBATCH -N 1
 #SBATCH -n 2
-#SBATCH --error=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/logs/%x-%j.error
+#SBATCH --output=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/logs/%x-%j.out
+#SBATCH --error=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/logs/%x-%j.err
 #SBATCH --mail-type=END
 #SBATCH --mail-user=soo.m@northeastern.edu
 

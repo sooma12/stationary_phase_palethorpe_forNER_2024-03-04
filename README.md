@@ -123,6 +123,23 @@ Make an annotation file with just this.
 - `conda activate /work/geisingerlab/conda_env/blast_corr`  I had installed BLAST previously
 - Make BLAST database in `./ref/CP065432_ref`: `makeblastdb -in CP065432.1.fasta -parse_seqids -dbtype nucl`
 - Run `sbatch scripts/sbatch_0_blast_sRNAs.sh`
+- Produces an output file in `./data/sRNA_blast_17961/` in BLAST output format 6, which is:
+`qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore`
+   1.  qseqid      query or source (gene) sequence id
+   2.  sseqid      subject or target (reference genome) sequence id
+   3.  pident      percentage of identical positions
+   4.  length      alignment length (sequence overlap)
+   5.  mismatch    number of mismatches
+   6.  gapopen     number of gap openings
+   7.  qstart      start of alignment in query
+   8.  qend        end of alignment in query
+   9.  sstart      start of alignment in subject
+  10.  send        end of alignment in subject
+  11.  evalue      expect value
+  12.  bitscore    bit score
+
+4. `sed` to add a header line to the file:
+`sed $'s/^/qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore /' srna_blast_output.txt > srna_blast_output_header.txt`
 
 
 ### Alignment to reference
