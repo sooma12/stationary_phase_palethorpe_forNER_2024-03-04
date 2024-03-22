@@ -161,7 +161,7 @@ def main():
     # Write GTF file using pandas
     outfile_path = WORKING_DIR + '/srnas_17961_24-03-22.gtf'
     # quoting/quotechar/escapechar below are needed to ensure the attributes field is properly double-quoted
-    pd.DataFrame(dict_to_df).to_csv(outfile_path, sep='\t', quoting=csv.QUOTE_NONE, quotechar="",  escapechar="\\")
+    pd.DataFrame(dict_to_df).to_csv(outfile_path, sep='\t', header=False, index=False, quoting=csv.QUOTE_NONE, quotechar="",  escapechar="\\")
     print(f'Wrote file to: {outfile_path}')
 
 if __name__ == '__main__':
