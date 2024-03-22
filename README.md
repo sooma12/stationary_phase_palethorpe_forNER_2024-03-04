@@ -141,6 +141,29 @@ Make an annotation file with just this.
 4. `sed` to add a header line to the file:
 `sed $'s/^/qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore /' srna_blast_output.txt > srna_blast_output_header.txt`
 
+5. For first pass, proceed with list of possible BfmR sRNA targets from EG (sent 3/19/2024)
+sRNA21
+sRNA85
+sRNA77
+sRNA103
+sRNA40
+sRNA102
+sRNA76
+sRNA20
+sRNA29
+sRNA53
+sRNA87
+sRNA30
+sRNA35
+sRNA54
+sRNA84
+
+6. For these sRNAs, compare BLAST results against predicted sRNA lengths from Kroger 2017.
+
+Used `kroger_srnas_to_gtf.py` to create a GTF file for the target RNAs.  These were filtered first by Eddie's list, then looking for BLAST hits that were at least 99% of the length of the sRNAs in the Kroger 2017 S3 table and at least 80% BLASTn percent identity.
+
+7. Creating reference genome
+
 
 ### Alignment to reference
 
