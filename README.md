@@ -182,3 +182,19 @@ featureCounts failed initially due to the start/end coordinate issue described a
 I also ran into a "0% successfully aligned" error that was due to the chromosome tag in the reference genome and in the bam file header not matching (detected using `samtools view -H`).
 The latter error was because I passed the wrong reference genome path to featureCounts - was not the sRNA-containing genome from the CP065432.1.fasta file.
 
+### DESeq
+
+RStudio Rocker container R 4.3.1
+
+For read file name cleanup, I used the links in the Palethorpe paper found in this paragraph:
+```text
+Raw Illumina sequencing reads were deposited in the NCBI Sequence Read Archive under BioProject ID PRJNA780533, with accession numbers SRX13141184, SRX13141185, and SRX13141186 for strain ATCC 17961 and SRX13141187, SRX13141188, and SRX13141189 for strain 17961-ΔbfmR.
+```
+
+The NCBI Sequencing Read Archive files were associated with genotypes as follows:
+SRR16949318 = 17961-∆bfmR
+SRR16949319 = 17961-∆bfmR
+SRR16949320 = 17961-∆bfmR
+SRR16949321 = ATCC 17961 WT
+SRR16949322 = ATCC 17961 WT
+SRR16949323 = ATCC 17961 WT
