@@ -16,11 +16,10 @@
 module load star/2.7.11a
 
 # Variables
-GENOME_DIR=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref
+GENOME_DIR=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/ref/CP065432_1_srnas
 OUT_DIR=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data
 # fastq directory... non-quality-trimmed reads are in input/
 # quality-trimmed reads are in data/RNA/trimmed/paired and data/RNA/trimmed/unpaired
-FASTQ_DIR=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data/trimmed/paired
 SAMPLE_SHEET=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/sample_sheet.txt
 
 # STAR requires the output directory be pre-made

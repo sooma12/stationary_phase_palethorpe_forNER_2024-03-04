@@ -161,13 +161,22 @@ sRNA84
 6. For these sRNAs, compare BLAST results against predicted sRNA lengths from Kroger 2017.
 
 Used `kroger_srnas_to_gtf.py` to create a GTF file for the target RNAs.  These were filtered first by Eddie's list, then looking for BLAST hits that were at least 99% of the length of the sRNAs in the Kroger 2017 S3 table and at least 80% BLASTn percent identity.
+NOTE: I initially forgot to ensure that "start" and "end" coordinates were always in numerical order (start < end) regardless of strand.  Fixed.
 
 7. Creating reference genome
 
+Used `sbatch_4_sRNA_generate.sh`
 
 ### Alignment to reference
 
 Prepare sample sheet using:
 `bash scripts/script_5_prep_sample_sheet_for_STAR.sh /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data/trimmed/paired /work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/data/trimmed/paired/sample_sheet.txt`
 
-Run STAR aligner using `sbatch_6_STARalign.sh`
+Run STAR aligner using `sbatch_6_srna_STARalign.sh`
+
+### Featurecounts
+
+Featurecounts failed initially due to the start/end coordinate issue described above.
+
+Once this was fixed, featurecounts ran with 0% successfully assigned.
+Issue is probably that 
