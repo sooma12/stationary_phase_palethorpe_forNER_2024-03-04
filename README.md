@@ -166,6 +166,8 @@ NOTE: I initially forgot to ensure that "start" and "end" coordinates were alway
 7. Creating reference genome
 
 Used `sbatch_4_sRNA_generate.sh`
+The FASTA file was CP065432.1.fasta downloaded from https://www.ncbi.nlm.nih.gov/nuccore/CP065432
+The input GTF file was srnas_17961_24-03-22.gtf, generated above.
 
 ### Alignment to reference
 
@@ -176,7 +178,7 @@ Run STAR aligner using `sbatch_6_srna_STARalign.sh`
 
 ### Featurecounts
 
-Featurecounts failed initially due to the start/end coordinate issue described above.
+featureCounts failed initially due to the start/end coordinate issue described above.
+I also ran into a "0% successfully aligned" error that was due to the chromosome tag in the reference genome and in the bam file header not matching (detected using `samtools view -H`).
+The latter error was because I passed the wrong reference genome path to featureCounts - was not the sRNA-containing genome from the CP065432.1.fasta file.
 
-Once this was fixed, featurecounts ran with 0% successfully assigned.
-Issue is probably that 
