@@ -26,5 +26,6 @@ mkdir -p $OUT_DIR
 featureCounts \
 -a $GTF_REF \
 -o $OUT_DIR/srna_counts.txt \
+-p \
 -t sRNA \
 $STAR_DIR/*.bam
