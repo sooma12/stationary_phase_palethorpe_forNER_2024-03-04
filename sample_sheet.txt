@@ -1,0 +1,6 @@
+SRR16949318 data/trimmed/paired/SRR16949318_trimmed_R1.fastq data/trimmed/paired/SRR16949318_trimmed_R2.fastq
+SRR16949319 data/trimmed/paired/SRR16949319_trimmed_R1.fastq data/trimmed/paired/SRR16949319_trimmed_R2.fastq
+SRR16949320 data/trimmed/paired/SRR16949320_trimmed_R1.fastq data/trimmed/paired/SRR16949320_trimmed_R2.fastq
+SRR16949321 data/trimmed/paired/SRR16949321_trimmed_R1.fastq data/trimmed/paired/SRR16949321_trimmed_R2.fastq
+SRR16949322 data/trimmed/paired/SRR16949322_trimmed_R1.fastq data/trimmed/paired/SRR16949322_trimmed_R2.fastq
+SRR16949323 data/trimmed/paired/SRR16949323_trimmed_R1.fastq data/trimmed/paired/SRR16949323_trimmed_R2.fastq
