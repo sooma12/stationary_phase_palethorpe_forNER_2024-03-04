@@ -2,8 +2,8 @@
 #SBATCH --partition=short
 #SBATCH --job-name=alignRNA
 #SBATCH --time=04:00:00
-#SBATCH --array=1-9%10
-#SBATCH --ntasks=9
+#SBATCH --array=1-6%7
+#SBATCH --ntasks=6
 #SBATCH --mem=100G
 #SBATCH --cpus-per-task=1
 #SBATCH --output=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04/logs/%x-%j.log
