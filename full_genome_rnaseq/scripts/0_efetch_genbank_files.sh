@@ -19,8 +19,8 @@ mkdir -p $REFERENCE_DIR
 for i in "${ACCESSION_ARRAY[@]}"; do
   fasta_file=${i}.fasta
   gff3_file=${i}.gff3
-  wget -O "$REFERENCE_DIR$fasta_file" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore&report=fasta&id=${i}"
-  wget -O "$REFERENCE_DIR$gff3_file" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore&report=gff3&id=${i}"
+  wget -O "$REFERENCE_DIR/$fasta_file" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore&report=fasta&id=${i}"
+  wget -O "$REFERENCE_DIR/$gff3_file" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?db=nuccore&report=gff3&id=${i}"
 done
 
 for file in $REFERENCE_DIR/CP*.gff3; do

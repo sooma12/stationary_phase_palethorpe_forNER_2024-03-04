@@ -1,0 +1,33 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region CP065433.1 1 9395
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470
+CP065433.1	Genbank	region	1	9395	.	+	.	ID=CP065433.1:1..9395;Dbxref=taxon:470;Is_circular=true;Name=pAB17961-1;collected-by=ATCC;collection-date=May-2016;country=USA;culture-collection=ATCC:17961;gbkey=Src;genome=plasmid;isolation-source=blood;mol_type=genomic DNA;nat-host=Homo sapiens;plasmid-name=pAB17961-1;strain=ATCC 17961
+CP065433.1	Genbank	gene	1	936	.	+	.	ID=gene-I5593_19280;Name=I5593_19280;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19280
+CP065433.1	Protein Homology	CDS	1	936	.	+	0	ID=cds-QPP16179.1;Parent=gene-I5593_19280;Dbxref=NCBI_GP:QPP16179.1;Name=QPP16179.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_005065049.1;locus_tag=I5593_19280;product=replication initiation protein;protein_id=QPP16179.1;transl_table=11
+CP065433.1	Genbank	gene	1014	1532	.	+	.	ID=gene-I5593_19285;Name=I5593_19285;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19285
+CP065433.1	Protein Homology	CDS	1014	1532	.	+	0	ID=cds-QPP16180.1;Parent=gene-I5593_19285;Dbxref=NCBI_GP:QPP16180.1;Name=QPP16180.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_000839337.1;locus_tag=I5593_19285;product=DNA-binding protein;protein_id=QPP16180.1;transl_table=11
+CP065433.1	Genbank	gene	1772	2203	.	-	.	ID=gene-I5593_19290;Name=I5593_19290;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19290
+CP065433.1	Protein Homology	CDS	1772	2203	.	-	0	ID=cds-QPP16181.1;Parent=gene-I5593_19290;Dbxref=NCBI_GP:QPP16181.1;Name=QPP16181.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_005401805.1;locus_tag=I5593_19290;product=MarR family transcriptional regulator;protein_id=QPP16181.1;transl_table=11
+CP065433.1	Genbank	gene	2210	2638	.	-	.	ID=gene-I5593_19295;Name=I5593_19295;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19295
+CP065433.1	Protein Homology	CDS	2210	2638	.	-	0	ID=cds-QPP16182.1;Parent=gene-I5593_19295;Dbxref=NCBI_GP:QPP16182.1;Name=QPP16182.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_010116199.1;locus_tag=I5593_19295;product=organic hydroperoxide resistance protein;protein_id=QPP16182.1;transl_table=11
+CP065433.1	Genbank	gene	2836	3348	.	-	.	ID=gene-I5593_19300;Name=I5593_19300;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19300
+CP065433.1	Protein Homology	CDS	2836	3348	.	-	0	ID=cds-QPP16183.1;Parent=gene-I5593_19300;Dbxref=NCBI_GP:QPP16183.1;Name=QPP16183.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_019767798.1;locus_tag=I5593_19300;product=SMI1/KNR4 family protein;protein_id=QPP16183.1;transl_table=11
+CP065433.1	Genbank	gene	3387	3905	.	-	.	ID=gene-I5593_19305;Name=I5593_19305;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19305
+CP065433.1	Protein Homology	CDS	3387	3905	.	-	0	ID=cds-QPP16187.1;Parent=gene-I5593_19305;Dbxref=NCBI_GP:QPP16187.1;Name=QPP16187.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_000447193.1;locus_tag=I5593_19305;product=sel1 repeat family protein;protein_id=QPP16187.1;transl_table=11
+CP065433.1	Genbank	gene	4080	4289	.	-	.	ID=gene-I5593_19310;Name=I5593_19310;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19310
+CP065433.1	Protein Homology	CDS	4080	4289	.	-	0	ID=cds-QPP16184.1;Parent=gene-I5593_19310;Dbxref=NCBI_GP:QPP16184.1;Name=QPP16184.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_018680077.1;locus_tag=I5593_19310;product=hypothetical protein;protein_id=QPP16184.1;transl_table=11
+CP065433.1	Genbank	gene	4282	4584	.	-	.	ID=gene-I5593_19315;Name=I5593_19315;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19315
+CP065433.1	Protein Homology	CDS	4282	4584	.	-	0	ID=cds-QPP16185.1;Parent=gene-I5593_19315;Dbxref=NCBI_GP:QPP16185.1;Name=QPP16185.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_001140617.1;locus_tag=I5593_19315;product=helix-turn-helix transcriptional regulator;protein_id=QPP16185.1;transl_table=11
+CP065433.1	Genbank	gene	4577	4933	.	-	.	ID=gene-I5593_19320;Name=I5593_19320;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19320
+CP065433.1	Protein Homology	CDS	4577	4933	.	-	0	ID=cds-QPP16186.1;Parent=gene-I5593_19320;Dbxref=NCBI_GP:QPP16186.1;Name=QPP16186.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_005194067.1;locus_tag=I5593_19320;product=type II toxin-antitoxin system RelE/ParE family toxin;protein_id=QPP16186.1;transl_table=11
+CP065433.1	Genbank	gene	5551	5979	.	+	.	ID=gene-I5593_19325;Name=I5593_19325;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19325
+CP065433.1	Protein Homology	CDS	5551	5979	.	+	0	ID=cds-QPP16176.1;Parent=gene-I5593_19325;Dbxref=NCBI_GP:QPP16176.1;Name=QPP16176.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_010116199.1;locus_tag=I5593_19325;product=organic hydroperoxide resistance protein;protein_id=QPP16176.1;transl_table=11
+CP065433.1	Genbank	gene	5986	6417	.	+	.	ID=gene-I5593_19330;Name=I5593_19330;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19330
+CP065433.1	Protein Homology	CDS	5986	6417	.	+	0	ID=cds-QPP16177.1;Parent=gene-I5593_19330;Dbxref=NCBI_GP:QPP16177.1;Name=QPP16177.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_005401805.1;locus_tag=I5593_19330;product=MarR family transcriptional regulator;protein_id=QPP16177.1;transl_table=11
+CP065433.1	Genbank	gene	6564	7325	.	-	.	ID=gene-I5593_19335;Name=I5593_19335;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19335
+CP065433.1	Protein Homology	CDS	6564	7325	.	-	0	ID=cds-QPP16188.1;Parent=gene-I5593_19335;Dbxref=NCBI_GP:QPP16188.1;Name=QPP16188.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_017393773.1;locus_tag=I5593_19335;product=hypothetical protein;protein_id=QPP16188.1;transl_table=11
+CP065433.1	Genbank	gene	7630	8799	.	+	.	ID=gene-I5593_19340;Name=I5593_19340;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19340
+CP065433.1	Protein Homology	CDS	7630	8799	.	+	0	ID=cds-QPP16178.1;Parent=gene-I5593_19340;Dbxref=NCBI_GP:QPP16178.1;Name=QPP16178.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_002011489.1;locus_tag=I5593_19340;product=MobA/MobL family protein;protein_id=QPP16178.1;transl_table=11
+

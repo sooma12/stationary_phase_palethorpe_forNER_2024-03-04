@@ -50,9 +50,9 @@ column_names <- sub("Aligned.sortedByCoord.out.bam", "", column_names)
 column_names <- sub("SRR16949318", "17961-dbfmR_1", column_names)
 column_names <- sub("SRR16949319", "17961-dbfmR_2", column_names)
 column_names <- sub("SRR16949320", "17961-dbfmR_3", column_names)
-column_names <- sub("SRR16949321", "17961-WT-1", column_names)
-column_names <- sub("SRR16949322", "17961-WT-2", column_names)
-column_names <- sub("SRR16949323", "17961-WT-3", column_names)
+column_names <- sub("SRR16949321", "17961-WT_1", column_names)
+column_names <- sub("SRR16949322", "17961-WT_2", column_names)
+column_names <- sub("SRR16949323", "17961-WT_3", column_names)
 column_names
 colnames(data) <- column_names
 # Use regex to get condition (mutation) from strain IDs
@@ -70,10 +70,10 @@ meta  # Verify that IDs and conditions are as expected
 
 ## Load data, pre-filter low-count genes, and relevel to set WT as the reference
 des_data <- DESeqDataSetFromMatrix(countData = data, colData = meta, design = ~ condition)
-smallestGroupSize <- 3  # should be size of smallest group; I did 3 replicates
+smallestGroupSize <- 3  # should be size of smallest group, i.e. 3 replicates
 keep <- rowSums(counts(des_data) >= 10) >= smallestGroupSize  # keep data where count is >10 in all 3 samples
 # relevel dds$condition to set WT as the reference
-des_data$condition <- relevel(des_data$condition, ref = "WT")
+des_data$condition <- relevel(des_data$condition, ref = "17961-WT")
 
 dds <- DESeq(des_data)
 
@@ -81,40 +81,17 @@ dds <- DESeq(des_data)
 resultsNames(dds)  # get names of coefficients to shrink
 ## "Intercept" "condition_DlpsB_vs_WT" "condition_DpbpG_vs_WT"
 # Use default shrinkage, which is apeglm method (Zhu, Ibrahim, and Love 2018)
-resLFC_R <- lfcShrink(dds, coef="condition_dbfmR_vs_WT", type="apeglm")
-resLFC_S <- lfcShrink(dds, coef="condition_dbfmS_vs_WT", type="apeglm")
-resLFC_RS <- lfcShrink(dds, coef="condition_dbfmRS_vs_WT", type="apeglm")
-
-# Clean up row names
-#pbpG_rownames <- sub('gene-', '', row.names(resLFC_pbpG))
-#lpsB_rownames <- sub('gene-', '', row.names(resLFC_lpsB))
-#row.names(resLFC_pbpG) <- pbpG_rownames
-#row.names(resLFC_lpsB) <- lpsB_rownames
+resLFC <- lfcShrink(dds, coef="condition_17961.dbfmR_vs_17961.WT", type="apeglm")
 
 # Count significant hits
-sum(resLFC_R$padj < 0.1, na.rm=TRUE)
-sum(resLFC_R$padj < 0.1 & abs(resLFC_R$log2FoldChange) > 1, na.rm=TRUE)
-
-sum(resLFC_S$padj < 0.1, na.rm=TRUE)
-sum(resLFC_S$padj < 0.1 & abs(resLFC_S$log2FoldChange) > 1, na.rm=TRUE)
-
-sum(resLFC_RS$padj < 0.1, na.rm=TRUE)
-sum(resLFC_RS$padj < 0.1 & abs(resLFC_RS$log2FoldChange) > 1, na.rm=TRUE)
-
-# Check largest foldchanges from significant hits
-resSig_R <- resLFC_R[which(resLFC_R$padj < 0.1), ]
-resSig_S <- resLFC_S[which(resLFC_S$padj < 0.1), ]
-resSig_RS <- resLFC_RS[which(resLFC_RS$padj < 0.1), ]
+sum(resLFC$padj < 0.1, na.rm=TRUE)
+sum(resLFC$padj < 0.1 & abs(resLFC$log2FoldChange) > 1, na.rm=TRUE)
 
 #downregulated
-head(resSig_R[order(resSig_R$log2FoldChange),])
-head(resSig_S[order(resSig_S$log2FoldChange),])
-head(resSig_RS[order(resSig_RS$log2FoldChange),])
+head(resLFC[order(resLFC$log2FoldChange),])
 
 #upregulated
-tail(resSig_R[order(resSig_R$log2FoldChange),])
-tail(resSig_S[order(resSig_S$log2FoldChange),])
-tail(resSig_RS[order(resSig_RS$log2FoldChange),])
+tail(resLFC[order(resLFC$log2FoldChange),])
 
 # MA plot
 #plotMA(resSig, ylim=c(-1, 1))
@@ -140,14 +117,6 @@ tail(resSig_RS[order(resSig_RS$log2FoldChange),])
 
 
 # Save current analyses
-out_dir <- "/work/geisingerlab/Mark/rnaSeq/2024-03_eg_2020_rnaseq/data"
-setwd(out_dir)
+resOrdered <- resLFC[order(resLFC$pvalue),]
+write.csv(as.data.frame(resOrdered), file="DES_sRNAs_palethorpe_2024-03-26.csv")
 
-resOrdered_R <- resLFC_R[order(resLFC_R$pvalue),]
-write.csv(as.data.frame(resOrdered_R), file="DES_d-bfmR-sRNAs_2024-03-07.csv")
-
-resOrdered_S <- resLFC_S[order(resLFC_S$pvalue),]
-write.csv(as.data.frame(resOrdered_S), file="DES_d-bfmS-sRNAs_2024-03-07.csv")
-
-resOrdered_RS <- resLFC_RS[order(resLFC_RS$pvalue),]
-write.csv(as.data.frame(resOrdered_RS), file="DES_d-bfmRS-sRNAs_2024-03-07.csv")

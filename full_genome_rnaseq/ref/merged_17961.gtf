@@ -1,0 +1,20 @@
+CP065434.1	Genbank	transcript	1	924	.	+	.	transcript_id "gene-I5593_19345"; gene_id "gene-I5593_19345"
+CP065434.1	Genbank	CDS	1	924	.	+	0	transcript_id "gene-I5593_19345";
+CP065434.1	Genbank	transcript	992	1537	.	+	.	transcript_id "gene-I5593_19350"; gene_id "gene-I5593_19350"
+CP065434.1	Genbank	CDS	992	1537	.	+	0	transcript_id "gene-I5593_19350";
+CP065434.1	Genbank	transcript	1765	2196	.	-	.	transcript_id "gene-I5593_19355"; gene_id "gene-I5593_19355"
+CP065434.1	Genbank	CDS	1765	2196	.	-	0	transcript_id "gene-I5593_19355";
+CP065434.1	Genbank	transcript	2203	2631	.	-	.	transcript_id "gene-I5593_19360"; gene_id "gene-I5593_19360"
+CP065434.1	Genbank	CDS	2203	2631	.	-	0	transcript_id "gene-I5593_19360";
+CP065434.1	Genbank	transcript	3202	3474	.	-	.	transcript_id "gene-I5593_19365"; gene_id "gene-I5593_19365"
+CP065434.1	Genbank	CDS	3202	3474	.	-	0	transcript_id "gene-I5593_19365";
+CP065434.1	Genbank	transcript	3467	3787	.	-	.	transcript_id "gene-I5593_19370"; gene_id "gene-I5593_19370"
+CP065434.1	Genbank	CDS	3467	3787	.	-	0	transcript_id "gene-I5593_19370";
+CP065434.1	Genbank	transcript	3974	4171	.	-	.	transcript_id "gene-I5593_19375"; gene_id "gene-I5593_19375"
+CP065434.1	Genbank	CDS	3974	4171	.	-	0	transcript_id "gene-I5593_19375";
+CP065434.1	Genbank	transcript	4238	4465	.	-	.	transcript_id "gene-I5593_19380"; gene_id "gene-I5593_19380"
+CP065434.1	Genbank	CDS	4238	4465	.	-	0	transcript_id "gene-I5593_19380";
+CP065434.1	Genbank	transcript	4563	4778	.	-	.	transcript_id "gene-I5593_19385"; gene_id "gene-I5593_19385"
+CP065434.1	Genbank	CDS	4563	4778	.	-	0	transcript_id "gene-I5593_19385";
+CP065434.1	Genbank	transcript	5109	5300	.	-	.	transcript_id "gene-I5593_19390"; gene_id "gene-I5593_19390"
+CP065434.1	Genbank	CDS	5109	5300	.	-	0	transcript_id "gene-I5593_19390";

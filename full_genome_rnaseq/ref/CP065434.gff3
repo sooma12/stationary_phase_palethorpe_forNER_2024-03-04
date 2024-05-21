@@ -1,0 +1,27 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region CP065434.1 1 6667
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470
+CP065434.1	Genbank	region	1	6667	.	+	.	ID=CP065434.1:1..6667;Dbxref=taxon:470;Is_circular=true;Name=pAB17961-2;collected-by=ATCC;collection-date=May-2016;country=USA;culture-collection=ATCC:17961;gbkey=Src;genome=plasmid;isolation-source=blood;mol_type=genomic DNA;nat-host=Homo sapiens;plasmid-name=pAB17961-2;strain=ATCC 17961
+CP065434.1	Genbank	gene	1	924	.	+	.	ID=gene-I5593_19345;Name=I5593_19345;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19345
+CP065434.1	Protein Homology	CDS	1	924	.	+	0	ID=cds-QPP16194.1;Parent=gene-I5593_19345;Dbxref=NCBI_GP:QPP16194.1;Name=QPP16194.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_004282204.1;locus_tag=I5593_19345;product=replication initiation protein;protein_id=QPP16194.1;transl_table=11
+CP065434.1	Genbank	gene	992	1537	.	+	.	ID=gene-I5593_19350;Name=I5593_19350;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19350
+CP065434.1	Protein Homology	CDS	992	1537	.	+	0	ID=cds-QPP16195.1;Parent=gene-I5593_19350;Dbxref=NCBI_GP:QPP16195.1;Name=QPP16195.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_004786457.1;locus_tag=I5593_19350;product=DNA-binding protein;protein_id=QPP16195.1;transl_table=11
+CP065434.1	Genbank	gene	1765	2196	.	-	.	ID=gene-I5593_19355;Name=I5593_19355;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19355
+CP065434.1	Protein Homology	CDS	1765	2196	.	-	0	ID=cds-QPP16196.1;Parent=gene-I5593_19355;Dbxref=NCBI_GP:QPP16196.1;Name=QPP16196.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_005401805.1;locus_tag=I5593_19355;product=MarR family transcriptional regulator;protein_id=QPP16196.1;transl_table=11
+CP065434.1	Genbank	gene	2203	2631	.	-	.	ID=gene-I5593_19360;Name=I5593_19360;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19360
+CP065434.1	Protein Homology	CDS	2203	2631	.	-	0	ID=cds-QPP16197.1;Parent=gene-I5593_19360;Dbxref=NCBI_GP:QPP16197.1;Name=QPP16197.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_010116199.1;locus_tag=I5593_19360;product=organic hydroperoxide resistance protein;protein_id=QPP16197.1;transl_table=11
+CP065434.1	Genbank	gene	3202	3474	.	-	.	ID=gene-I5593_19365;Name=I5593_19365;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19365
+CP065434.1	Protein Homology	CDS	3202	3474	.	-	0	ID=cds-QPP16198.1;Parent=gene-I5593_19365;Dbxref=NCBI_GP:QPP16198.1;Name=QPP16198.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_000369784.1;locus_tag=I5593_19365;product=helix-turn-helix domain-containing protein;protein_id=QPP16198.1;transl_table=11
+CP065434.1	Genbank	gene	3467	3787	.	-	.	ID=gene-I5593_19370;Name=I5593_19370;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19370
+CP065434.1	Protein Homology	CDS	3467	3787	.	-	0	ID=cds-QPP16189.1;Parent=gene-I5593_19370;Dbxref=NCBI_GP:QPP16189.1;Name=QPP16189.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_000897307.1;locus_tag=I5593_19370;product=type II toxin-antitoxin system RelE/ParE family toxin;protein_id=QPP16189.1;transl_table=11
+CP065434.1	Genbank	gene	3974	4171	.	-	.	ID=gene-I5593_19375;Name=I5593_19375;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19375
+CP065434.1	Protein Homology	CDS	3974	4171	.	-	0	ID=cds-QPP16190.1;Parent=gene-I5593_19375;Dbxref=NCBI_GP:QPP16190.1;Name=QPP16190.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_005237334.1;locus_tag=I5593_19375;product=hypothetical protein;protein_id=QPP16190.1;transl_table=11
+CP065434.1	Genbank	gene	4238	4465	.	-	.	ID=gene-I5593_19380;Name=I5593_19380;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19380
+CP065434.1	Protein Homology	CDS	4238	4465	.	-	0	ID=cds-QPP16191.1;Parent=gene-I5593_19380;Dbxref=NCBI_GP:QPP16191.1;Name=QPP16191.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_005166620.1;locus_tag=I5593_19380;product=hypothetical protein;protein_id=QPP16191.1;transl_table=11
+CP065434.1	Genbank	gene	4563	4778	.	-	.	ID=gene-I5593_19385;Name=I5593_19385;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19385
+CP065434.1	Protein Homology	CDS	4563	4778	.	-	0	ID=cds-QPP16192.1;Parent=gene-I5593_19385;Dbxref=NCBI_GP:QPP16192.1;Name=QPP16192.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_004693381.1;locus_tag=I5593_19385;product=cold-shock protein;protein_id=QPP16192.1;transl_table=11
+CP065434.1	Genbank	gene	5109	5300	.	-	.	ID=gene-I5593_19390;Name=I5593_19390;gbkey=Gene;gene_biotype=protein_coding;locus_tag=I5593_19390
+CP065434.1	Protein Homology	CDS	5109	5300	.	-	0	ID=cds-QPP16193.1;Parent=gene-I5593_19390;Dbxref=NCBI_GP:QPP16193.1;Name=QPP16193.1;gbkey=CDS;inference=COORDINATES: similar to AA sequence:RefSeq:WP_004706315.1;locus_tag=I5593_19390;product=hypothetical protein;protein_id=QPP16193.1;transl_table=11
+
