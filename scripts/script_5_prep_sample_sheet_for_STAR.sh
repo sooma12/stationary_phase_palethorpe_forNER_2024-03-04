@@ -1,5 +1,5 @@
 #!/bin/bash
-# prep_sample_sheet_for_starAlign.sh
+# 4_prep_sample_sheet_for_starAlign.sh
 # Makes a sample_sheet.txt containing sample ID and R1 and R2 filepaths
 # Assumes each sample file is in the format: SRR16949322_trimmed_R1.fastq
 # Example output line:  SRR16949322 /path/to/SRR16949322_R1.fastq /path/to/SRR16949322_R2.fastq

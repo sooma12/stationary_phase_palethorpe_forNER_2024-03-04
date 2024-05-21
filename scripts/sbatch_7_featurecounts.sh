@@ -9,7 +9,7 @@
 #SBATCH --mail-type=END
 #SBATCH --mail-user=soo.m@northeastern.edu
 
-# Usage: sbatch sbatch_7_featurecounts.sh
+# Usage: sbatch 6_sbatch_featurecounts.sh
 BASE_DIR=/work/geisingerlab/Mark/rnaSeq/stationary_phase_palethorpe_forNER_2024-03-04
 OUT_DIR=${BASE_DIR}/data/featurecounts
 # GTF file for sRNAs in 17961
